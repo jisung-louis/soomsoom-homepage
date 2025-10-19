@@ -112,22 +112,68 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             background: linear-gradient(135deg, #f97316, #eab308, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.25rem;
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .app-purpose {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 32px auto;
+            max-width: 800px;
+            border: 1px solid rgba(139, 69, 19, 0.3);
+        }
+
+        .app-purpose h3 {
+            font-size: 1.5rem;
+            color: #f97316;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .app-purpose p {
+            font-size: 1.125rem;
             color: #d8b4fe;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .key-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 69, 19, 0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(139, 69, 19, 0.3);
+            color: #d8b4fe;
+            font-weight: 500;
+        }
+
+        .benefit-icon {
+            font-size: 1.25rem;
         }
 
         .stars {
@@ -232,6 +278,19 @@
         .features-header p {
             color: #d8b4fe;
             font-size: 1.125rem;
+        }
+
+        .features-description {
+            margin-top: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-description p {
+            color: #a78bfa;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .features-grid {
@@ -380,11 +439,35 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             
-            .hero p {
-                font-size: 1.125rem;
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+            
+            .app-purpose {
+                padding: 24px;
+                margin: 24px auto;
+            }
+            
+            .app-purpose h3 {
+                font-size: 1.25rem;
+            }
+            
+            .app-purpose p {
+                font-size: 1rem;
+            }
+            
+            .key-benefits {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+            
+            .benefit-item {
+                padding: 10px 16px;
+                font-size: 0.9rem;
             }
             
             .features-grid {
@@ -434,14 +517,31 @@
             </div>
             
             <div class="hero-logo">
-                <div class="logo-placeholder">🐱 숨숨</div>
+                <div class="logo-placeholder">🐱</div>
             </div>
             
             <h1>숨숨</h1>
-            <h1>오늘 당신의 한숨을,<br>내일의 나를 안아줄 따뜻한 숨결로.</h1>
+            <h2>오늘 당신의 한숨을,<br>내일의 나를 안아줄 따뜻한 숨결로.</h2>
             
-            <p>마음속 고양이, '야웅이'와 함께 나를 돌보는 시간을 가져보세요.<br>
-            '야웅이'와 함께 감정을 다루는 건강한 방법을 배워봐요.</p>
+            <div class="app-purpose">
+                <h3>마음의 건강을 돌보는 스마트한 동반자</h3>
+                <p>숨숨은 일상의 스트레스와 감정을 건강하게 관리할 수 있도록 도와주는 마음 돌봄 앱입니다. 마음속 고양이 '야웅이'와 함께 감정을 기록하고, 명상을 통해 마음의 평화를 찾으며, 매일의 작은 성장을 통해 더 나은 자신을 만들어가세요.</p>
+            </div>
+            
+            <div class="key-benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">🧘‍♀️</span>
+                    <span>스트레스 해소와 마음의 평화</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📝</span>
+                    <span>감정 인식과 자기 이해</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🌱</span>
+                    <span>지속적인 마음 성장</span>
+                </div>
+            </div>
             
             <div class="hero-buttons">
                 <a href="#" class="download-btn">시작하기</a>
@@ -455,6 +555,9 @@
             <div class="features-header">
                 <h2>주요 기능</h2>
                 <p>나를 돌보는 여정에 필요한 모든 것</p>
+                <div class="features-description">
+                    <p>숨숨은 마음의 건강을 위한 다양한 도구들을 제공합니다. 감정을 기록하고, 명상을 통해 평화를 찾으며, 매일의 작은 성장을 통해 더 나은 자신을 만들어가세요.</p>
+                </div>
             </div>
             
             <div class="features-grid">
