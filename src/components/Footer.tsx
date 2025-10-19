@@ -10,12 +10,20 @@ export function Footer() {
             <h3 className="text-white mb-4">약관 및 정책</h3>
             <ul className="space-y-2 text-purple-300 flex justify-center gap-8">
               <li>
-                <Link to="/terms" className="hover:text-white transition-colors">
+                <Link 
+                  to="/terms" 
+                  className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() => console.log("이용약관 클릭됨")}
+                >
                   이용약관
                 </Link>
               </li>
               <li id="privacy">
-                <Link to="/privacy" className="hover:text-white transition-colors">
+                <Link 
+                  to="/privacy" 
+                  className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() => console.log("개인정보처리방침 클릭됨")}
+                >
                   개인정보처리방침
                 </Link>
               </li>
