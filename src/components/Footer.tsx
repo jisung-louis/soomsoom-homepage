@@ -10,14 +10,14 @@ export function Footer() {
             <h3 className="text-white mb-4">약관 및 정책</h3>
             <ul className="space-y-2 text-purple-300 flex justify-center gap-8">
               <li>
-                <Link to="/terms" className="hover:text-white transition-colors">
+                <a href="/soomsoom-homepage/terms" className="hover:text-white transition-colors">
                   이용약관
-                </Link>
+                </a>
               </li>
               <li id="privacy">
-                <Link to="/privacy" className="hover:text-white transition-colors">
+                <a href="/soomsoom-homepage/privacy" className="hover:text-white transition-colors">
                   개인정보처리방침
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
