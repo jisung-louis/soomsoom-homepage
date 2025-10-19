@@ -19,6 +19,14 @@ import screenshot5 from "figma:asset/bb40a1d8a22571e37ba5111b367fb0ded87b241e.pn
 function HomePage() {
   return (
     <>
+      {/* Debug Section */}
+      <section className="py-20 px-4 bg-red-500">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-white text-4xl mb-4">DEBUG: 홈페이지가 보이나요?</h1>
+          <p className="text-white text-xl">이 텍스트가 보이면 React 컴포넌트는 정상 작동합니다.</p>
+        </div>
+      </section>
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         {/* Decorative stars */}
