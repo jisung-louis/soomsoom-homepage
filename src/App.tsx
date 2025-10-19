@@ -163,16 +163,19 @@ export default function App() {
     <div className="min-h-screen bg-[#000016] flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Debug Section */}
-        <div className="py-20 px-4 bg-red-500">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-white text-4xl mb-4">DEBUG: Routes가 작동하나요?</h1>
-            <p className="text-white text-xl">이 텍스트가 보이면 App 컴포넌트는 정상 작동합니다.</p>
-          </div>
-        </div>
-        
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={
+            <div className="py-20 px-4">
+              <div className="container mx-auto max-w-4xl text-center">
+                <h1 className="text-white text-4xl mb-4">Routes 테스트</h1>
+                <p className="text-white text-xl">이 텍스트가 보이면 Routes가 정상 작동합니다!</p>
+                <div className="mt-8">
+                  <a href="/terms" className="text-purple-300 hover:text-white mr-4">이용약관</a>
+                  <a href="/privacy" className="text-purple-300 hover:text-white">개인정보처리방침</a>
+                </div>
+              </div>
+            </div>
+          } />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
