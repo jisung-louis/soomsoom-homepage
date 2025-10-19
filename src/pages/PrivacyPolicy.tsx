@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             뒤로가기
           </Button>
-          <h1 className="text-white text-xl font-semibold">개인정보처리방침</h1>
+          <h1 className="text-white text-xl font-semibold">개인정보 처리방침</h1>
         </div>
       </div>
 
