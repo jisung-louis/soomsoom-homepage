@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨숨 - 의약품 정보 관리 앱</title>
+    <meta name="description" content="숨숨으로 의약품 정보를 쉽게 관리하고 건강을 지키세요. 복용 알림, 상호작용 체크, 의약품 정보 검색 등 다양한 기능을 제공합니다.">
+    <meta name="keywords" content="의약품, 약물, 복용 알림, 건강 관리, 의약품 정보, 약물 상호작용">
+    <meta name="author" content="숨숨">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jisung-louis.github.io/soomsoom-homepage/">
+    <meta property="og:title" content="숨숨 - 의약품 정보 관리 앱">
+    <meta property="og:description" content="숨숨으로 의약품 정보를 쉽게 관리하고 건강을 지키세요.">
+    <meta property="og:image" content="https://jisung-louis.github.io/soomsoom-homepage/src/assets/256a9d95b55ddc89c91dc3406da9cf22738dc6fb.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jisung-louis.github.io/soomsoom-homepage/">
+    <meta property="twitter:title" content="숨숨 - 의약품 정보 관리 앱">
+    <meta property="twitter:description" content="숨숨으로 의약품 정보를 쉽게 관리하고 건강을 지키세요.">
+    <meta property="twitter:image" content="https://jisung-louis.github.io/soomsoom-homepage/src/assets/256a9d95b55ddc89c91dc3406da9cf22738dc6fb.png">
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="google953e833db15abe6b">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000016;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(0, 0, 22, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+
+        .nav a {
+            color: #d8b4fe;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: white;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #f97316, #eab308);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #ea580c, #ca8a04);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #000016 0%, #1a0b2e 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #f97316, #eab308, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #d8b4fe;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: #000016;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #1a0b2e, #2d1b69);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 69, 19, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #f97316, #eab308);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .feature-card p {
+            color: #d8b4fe;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000016;
+            border-top: 1px solid rgba(139, 69, 19, 0.3);
+            padding: 48px 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-links a {
+            color: #d8b4fe;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-copyright {
+            padding-top: 32px;
+            border-top: 1px solid rgba(139, 69, 19, 0.3);
+            color: #a78bfa;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <nav class="nav">
+                    <a href="#features">기능 소개</a>
+                    <a href="/soomsoom-homepage/terms-of-service.html" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a href="/soomsoom-homepage/privacy-policy.html" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                </nav>
+                
+                <a href="https://apps.apple.com/kr/app/%EC%88%A8%EC%88%A8/id6752624555" target="_blank" rel="noopener noreferrer" class="download-btn">
+                    앱 다운로드
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>숨숨</h1>
+            <p>의약품 정보를 쉽게 관리하고 건강을 지키는 스마트한 방법</p>
+            <img src="/soomsoom-homepage/src/assets/256a9d95b55ddc89c91dc3406da9cf22738dc6fb.png" alt="숨숨 앱 스크린샷" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>주요 기능</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>의약품 정보 관리</h3>
+                    <p>복용 중인 약물을 체계적으로 관리하고, 상세한 정보를 확인할 수 있습니다.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>복용 알림</h3>
+                    <p>정확한 시간에 복용 알림을 받아 약물을 놓치지 않도록 도와드립니다.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚠️</div>
+                    <h3>상호작용 체크</h3>
+                    <p>여러 약물 간의 상호작용을 미리 확인하여 안전한 복용을 보장합니다.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>복용 기록</h3>
+                    <p>복용 이력을 시각적으로 확인하고 건강 상태를 추적할 수 있습니다.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>의약품 검색</h3>
+                    <p>약물명, 성분명으로 쉽게 검색하고 상세 정보를 확인할 수 있습니다.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h3>의료진 공유</h3>
+                    <p>복용 중인 약물 정보를 의료진과 쉽게 공유할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>약관 및 정책</h3>
+                <div class="footer-links">
+                    <a href="/soomsoom-homepage/terms-of-service.html" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a href="/soomsoom-homepage/privacy-policy.html" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 숨숨. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 22, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 22, 0.8)';
+            }
+        });
+    </script>
+</body>
+</html>
