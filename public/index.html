@@ -104,6 +104,25 @@
             transform: translateY(-2px);
         }
 
+        .secondary-btn {
+            background: transparent;
+            color: #d8b4fe;
+            border: 2px solid #d8b4fe;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .secondary-btn:hover {
+            background: #d8b4fe;
+            color: #000016;
+            transform: translateY(-2px);
+        }
+
         /* Hero Section */
         .hero {
             padding: 120px 0 80px;
@@ -149,7 +168,25 @@
             font-size: 1.125rem;
             color: #d8b4fe;
             line-height: 1.6;
-            margin: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .no-login-notice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+
+        .notice-icon {
+            font-size: 1.125rem;
         }
 
         .key-benefits {
@@ -291,6 +328,21 @@
             color: #a78bfa;
             font-size: 1rem;
             line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .features-notice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+            font-weight: 500;
+            font-size: 0.85rem;
+            justify-content: center;
         }
 
         .features-grid {
@@ -526,6 +578,10 @@
             <div class="app-purpose">
                 <h3>마음의 건강을 돌보는 스마트한 동반자</h3>
                 <p>숨숨은 일상의 스트레스와 감정을 건강하게 관리할 수 있도록 도와주는 마음 돌봄 앱입니다. 마음속 고양이 '야웅이'와 함께 감정을 기록하고, 명상을 통해 마음의 평화를 찾으며, 매일의 작은 성장을 통해 더 나은 자신을 만들어가세요.</p>
+                <div class="no-login-notice">
+                    <span class="notice-icon">✨</span>
+                    <span>로그인 없이도 모든 기능을 자유롭게 사용할 수 있습니다</span>
+                </div>
             </div>
             
             <div class="key-benefits">
@@ -544,7 +600,10 @@
             </div>
             
             <div class="hero-buttons">
-                <a href="#" class="download-btn">시작하기</a>
+                <a href="https://apps.apple.com/kr/app/%EC%88%A8%EC%88%A8/id6752624555" target="_blank" rel="noopener noreferrer" class="download-btn">
+                    App Store에서 다운로드
+                </a>
+                <a href="#features" class="secondary-btn">앱 기능 알아보기</a>
             </div>
         </div>
     </section>
@@ -557,6 +616,10 @@
                 <p>나를 돌보는 여정에 필요한 모든 것</p>
                 <div class="features-description">
                     <p>숨숨은 마음의 건강을 위한 다양한 도구들을 제공합니다. 감정을 기록하고, 명상을 통해 평화를 찾으며, 매일의 작은 성장을 통해 더 나은 자신을 만들어가세요.</p>
+                    <div class="features-notice">
+                        <span class="notice-icon">🔓</span>
+                        <span>모든 기능을 로그인 없이 자유롭게 사용하세요</span>
+                    </div>
                 </div>
             </div>
             
