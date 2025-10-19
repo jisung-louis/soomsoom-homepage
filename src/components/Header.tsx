@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -8,12 +9,12 @@ export function Header() {
           <a href="#features" className="text-purple-200 hover:text-white transition-colors">
             기능 소개
           </a>
-          <a href="#terms" className="text-purple-200 hover:text-white transition-colors">
+          <Link to="/terms" className="text-purple-200 hover:text-white transition-colors">
             이용약관
-          </a>
-          <a href="#privacy" className="text-purple-200 hover:text-white transition-colors">
+          </Link>
+          <Link to="/privacy" className="text-purple-200 hover:text-white transition-colors">
             개인정보처리방침
-          </a>
+          </Link>
         </nav>
         
         <Button 
