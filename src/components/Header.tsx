@@ -9,12 +9,22 @@ export function Header() {
           <a href="#features" className="text-purple-200 hover:text-white transition-colors">
             기능 소개
           </a>
-          <Link to="/terms" className="text-purple-200 hover:text-white transition-colors">
+          <a 
+            href="/soomsoom-homepage/terms-of-service.html" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-200 hover:text-white transition-colors"
+          >
             이용약관
-          </Link>
-          <Link to="/privacy" className="text-purple-200 hover:text-white transition-colors">
+          </a>
+          <a 
+            href="/soomsoom-homepage/privacy-policy.html" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-200 hover:text-white transition-colors"
+          >
             개인정보처리방침
-          </Link>
+          </a>
         </nav>
         
         <Button 

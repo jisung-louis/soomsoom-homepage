@@ -10,22 +10,24 @@ export function Footer() {
             <h3 className="text-white mb-4">약관 및 정책</h3>
             <ul className="space-y-2 text-purple-300 flex justify-center gap-8">
               <li>
-                <Link 
-                  to="/terms" 
-                  className="hover:text-white transition-colors cursor-pointer"
-                  onClick={() => console.log("이용약관 클릭됨")}
+                <a 
+                  href="/soomsoom-homepage/terms-of-service.html" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors cursor-pointer text-lg font-medium"
                 >
                   이용약관
-                </Link>
+                </a>
               </li>
               <li id="privacy">
-                <Link 
-                  to="/privacy" 
-                  className="hover:text-white transition-colors cursor-pointer"
-                  onClick={() => console.log("개인정보처리방침 클릭됨")}
+                <a 
+                  href="/soomsoom-homepage/privacy-policy.html" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors cursor-pointer text-lg font-medium"
                 >
                   개인정보처리방침
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
