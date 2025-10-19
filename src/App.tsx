@@ -158,7 +158,11 @@ export default function App() {
     <div className="min-h-screen bg-[#000016] flex flex-col">
       <Header />
       <main className="flex-1">
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+        </Routes>
       </main>
       <Footer />
     </div>
