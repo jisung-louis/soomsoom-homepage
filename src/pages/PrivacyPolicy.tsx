@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#000016]">
+    <div className="bg-[#000016] py-8">
       {/* Header */}
       <div className="bg-[#000016] border-b border-purple-700/30 py-4 px-4">
         <div className="container mx-auto max-w-4xl flex items-center gap-4">

@@ -155,9 +155,9 @@ function HomePage() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#000016]">
+    <div className="min-h-screen bg-[#000016] flex flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/terms" element={<TermsOfService />} />
